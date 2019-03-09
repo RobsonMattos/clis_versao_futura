@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { OrganizacaoMilitar } from './organizaca-militar/organizacao-militar.model';
+import { OmService } from './om.service';
 
 @Component({
   selector: 'app-organizacao-militar-list',
@@ -7,44 +8,13 @@ import { OrganizacaoMilitar } from './organizaca-militar/organizacao-militar.mod
 })
 export class OrganizacaoMilitarListComponent implements OnInit {
   
-  organizacoesMilitar: OrganizacaoMilitar[] = [
-    {
-      id: 1,
-      nome: "Navio-Patrulha Guaratuba",
-      designacao: "NPAUBA",
-      quantidadePedidoServico: 50,
-      quantidadeOrdemServico: 543,
-      total: 450.000,
-    },
-    {
-      id: 2,
-      nome: "Navio-Patrulha Gravataí",
-      designacao: "NPATAI",
-      quantidadePedidoServico: 50,
-      quantidadeOrdemServico: 543,
-      total: 450.000,
-    },
-    {
-      id: 3,
-      nome: "Navio-Varredor Araçatuba",
-      designacao: "NVTUBA",
-      quantidadePedidoServico: 50,
-      quantidadeOrdemServico: 543,
-      total: 450.000,
-    },
-    {
-      id: 4,
-      nome: "Navio-Patrulha Graúna",
-      designacao: "NPAUNA",
-      quantidadePedidoServico: 50,
-      quantidadeOrdemServico: 543,
-      total: 450.000,
-    }
-  ];
+  organizacoesMilitar: OrganizacaoMilitar[];
 
-  constructor() { }
+  constructor(private omService: OmService) { }
 
   ngOnInit() {
+    this.omService.getAll().
+      subscribe((data: OrganizacaoMilitar[]) => this.organizacoesMilitar = data);
   }
 
 }

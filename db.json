@@ -1,0 +1,52 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "organizacoesMilitar": [
+    {
+      "id": 1,
+      "nome": "Navio-Patrulha Guaratuba",
+      "designacao": "NPAUBA",
+      "quantidadePedidoServico": 50,
+      "quantidadeOrdemServico": 543,
+      "total": 450.000
+    },
+    {
+      "id": 2,
+      "nome": "Navio-Patrulha Gravataí",
+      "designacao": "NPATAI",
+      "quantidadePedidoServico": 50,
+      "quantidadeOrdemServico": 543,
+      "total": 450.000
+    },
+    {
+      "id": 3,
+      "nome": "Navio-Varredor Araçatuba",
+      "designacao": "NVTUBA",
+      "quantidadePedidoServico": 50,
+      "quantidadeOrdemServico": 543,
+      "total": 450.000
+    },
+    {
+      "id": 4,
+      "nome": "Navio-Patrulha Graúna",
+      "designacao": "NPAUNA",
+      "quantidadePedidoServico": 50,
+      "quantidadeOrdemServico": 543,
+      "total": 450.000
+    }]
+  }
